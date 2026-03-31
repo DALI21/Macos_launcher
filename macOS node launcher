@@ -1,0 +1,3 @@
+curl.exe -sO https://citools.st.com/projects/stm32cubemx2validation/jenkins/jnlpJars/agent.jar
+java -jar agent.jar -url https://citools.st.com/projects/stm32cubemx2validation/jenkins/ -secret 15065a74e20e008879bbef6a8f979759245ea72f51e9320d06562f7a848473ff -name "agent13_MAC" -webSocket -workDir "/Users/tuncubevalidadm/tmp"
+ 
