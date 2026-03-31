@@ -1,12 +1,22 @@
 import platform
+import os
 
-if platform.system() == 'Windows':
+system = platform.system()
+
+if system == 'Windows':
     ROBOT_WORK_DIR = r'C:\Cubestudio_AutoValid\source\Main_scenarios\RFW'
     PYTHON_WORK_DIR = r'C:\Cubestudio_AutoValid\source\Main_scenarios\Python'
     NPM_WORK_DIR = r'C:\Cubestudio_AutoValid\source\utilities\CoopAPI\CoopApi'
     base_temp = r'C:\Temp'
 
-else:
+elif system == 'Darwin':  # macOS
+    base_root = '/Users/tuncubevalidadm/Documents/Cubestudio_AutoValid'
+    ROBOT_WORK_DIR = f'{base_root}/source/Main_scenarios/RFW'
+    PYTHON_WORK_DIR = f'{base_root}/source/Main_scenarios/Python'
+    NPM_WORK_DIR = f'{base_root}/source/utilities/CoopAPI/CoopApi'
+    base_temp = '/tmp'
+
+else:  # Linux or others
     ROBOT_WORK_DIR = '/local/home/tuncube2/Cubestudio_AutoValid/source/Main_scenarios/RFW'
     PYTHON_WORK_DIR = '/local/home/tuncube2/Cubestudio_AutoValid/source/Main_scenarios/Python'
     NPM_WORK_DIR = '/local/home/tuncube2/Cubestudio_AutoValid/source/utilities/CoopAPI/CoopApi'
