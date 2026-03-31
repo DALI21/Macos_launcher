@@ -1,0 +1,1 @@
+/Library/Frameworks/Python.framework/Versions/3.13/bin/python3 -m pip install robotframework --proxy "http://tuncubemxvalidadm:cubemx2017@appgw.sgp.st.com
